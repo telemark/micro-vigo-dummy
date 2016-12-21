@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1 (UNKNOWN_BRANCH-false; 2015-01-15T16:53:43+0100) JAXWS-RI/2.2.10 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. -->
+<xs:schema xmlns:tns="http://rim2.ist.com/rim2/v1/service" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://rim2.ist.com/rim2/v1/service">
+
+    <xs:element name="HentDataForArkivering" type="tns:HentDataForArkivering"/>
+
+    <xs:element name="HentDataForArkiveringResponse" type="tns:HentDataForArkiveringResponse"/>
+
+    <xs:element name="LagreStatusArkiverteData" type="tns:LagreStatusArkiverteData"/>
+
+    <xs:element name="LagreStatusArkiverteDataResponse" type="tns:LagreStatusArkiverteDataResponse"/>
+
+    <xs:element name="hentDataForArkiveringRequest" type="tns:DataForArkiveringRequestType"/>
+
+    <xs:element name="hentDataForArkiveringResponse" type="tns:DataForArkiveringResponseType"/>
+
+    <xs:complexType name="HentDataForArkivering">
+        <xs:sequence>
+            <xs:element name="HentDataForArkiveringRequestElm" type="tns:DataForArkiveringRequestType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DataForArkiveringRequestType">
+        <xs:sequence>
+            <xs:element name="AntallElevDokument" type="xs:int"/>
+            <xs:element name="Fylke" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HentDataForArkiveringResponse">
+        <xs:sequence>
+            <xs:element name="HentDataForArkiveringResponseElm" type="tns:DataForArkiveringResponseType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DataForArkiveringResponseType">
+        <xs:sequence>
+            <xs:element name="Elevelement" type="tns:DataForArkiveringElev" maxOccurs="unbounded"/>
+            <xs:element name="Feilmelding" type="tns:DataForArkiveringFeilmelding"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DataForArkiveringElev">
+        <xs:sequence>
+            <xs:element name="UnikId" type="xs:string"/>
+            <xs:element name="FagsystemNavn" type="xs:string"/>
+            <xs:element name="Fodselsnummer" type="xs:string"/>
+            <xs:element name="Fornavn" type="xs:string"/>
+            <xs:element name="Etternavn" type="xs:string"/>
+            <xs:element name="Epost" type="xs:string"/>
+            <xs:element name="Mobilnr" type="xs:string"/>
+            <xs:element name="Skole" type="xs:string" minOccurs="0"/>
+            <xs:element name="Fylke" type="xs:string"/>
+            <xs:element name="FolkeRegisterAdresse" type="tns:DataForArkiveringElevAdresse" minOccurs="0"/>
+            <xs:element name="Dokumentelement" type="tns:DataForArkiveringDokument"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DataForArkiveringElevAdresse">
+        <xs:sequence>
+            <xs:element name="Adresselinje1" type="xs:string"/>
+            <xs:element name="Adresselinje2" type="xs:string"/>
+            <xs:element name="Postnummmer" type="xs:string"/>
+            <xs:element name="Poststed" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DataForArkiveringDokument">
+        <xs:sequence>
+            <xs:element name="Dokumenttype" type="xs:string"/>
+            <xs:element name="Dokumenttittel" type="xs:string"/>
+            <xs:element name="DokumentId" type="xs:string"/>
+            <xs:element name="Dokumentdato" type="xs:dateTime"/>
+            <xs:element name="Dokumentfil" type="xs:base64Binary" minOccurs="0"/>
+            <xs:element name="Tilhorighet" type="xs:string" minOccurs="0"/>
+            <xs:element name="Info" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DataForArkiveringFeilmelding">
+        <xs:sequence>
+            <xs:element name="FeilId" type="xs:string"/>
+            <xs:element name="Feiltype" type="xs:string"/>
+            <xs:element name="DetaljertBeskrivelse" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LagreStatusArkiverteData">
+        <xs:sequence>
+            <xs:element name="LagreStatusArkiverteDataRequestElm" type="tns:StatusArkiverteDataRequestType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="StatusArkiverteDataRequestType">
+        <xs:sequence>
+            <xs:element name="Fagsystemnavn" type="xs:string"/>
+            <xs:element name="DokumentId" type="xs:string"/>
+            <xs:element name="Fodselsnummer" type="xs:string"/>
+            <xs:element name="ArkiveringUtfort" type="xs:boolean"/>
+            <xs:element name="Feilmelding" type="tns:DataForArkiveringFeilmelding"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LagreStatusArkiverteDataResponse">
+        <xs:sequence>
+            <xs:element name="LagreStatusArkiverteDataResponseElm" type="tns:StatusArkiverteDataResponseType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="StatusArkiverteDataResponseType">
+        <xs:sequence>
+            <xs:element name="Fagsystemnavn" type="xs:string"/>
+            <xs:element name="DokumentId" type="xs:string"/>
+            <xs:element name="Fodselsnummer" type="xs:string"/>
+            <xs:element name="ArkiveringUtfort" type="xs:boolean"/>
+            <xs:element name="Feilmelding" type="tns:DataForArkiveringFeilmelding"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

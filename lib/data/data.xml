@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
 <ser:HentDataForArkiveringResponse xmlns:ser="http://rim2.ist.com/rim2/v1/service">
     <!--Optional:-->
     <HentDataForArkiveringResponseElm>
@@ -41,3 +43,5 @@
         </Feilmelding>
     </HentDataForArkiveringResponseElm>
 </ser:HentDataForArkiveringResponse>
+    </s:Body>
+</s:Envelope>
