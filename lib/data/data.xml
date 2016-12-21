@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ser:HentDataForArkiveringResponse xmlns:ser="http://rim2.ist.com/rim2/v1/service">
+    <!--Optional:-->
+    <HentDataForArkiveringResponseElm>
+        <!--1 or more repetitions:-->
+        <Elevelement>
+            <UnikId>string</UnikId>
+            <FagsystemNavn>string</FagsystemNavn>
+            <Fodselsnummer>string</Fodselsnummer>
+            <Fornavn>string</Fornavn>
+            <Etternavn>string</Etternavn>
+            <Epost>string</Epost>
+            <Mobilnr>string</Mobilnr>
+            <!--Optional:-->
+            <Skole>string</Skole>
+            <Fylke>string</Fylke>
+            <!--Optional:-->
+            <FolkeRegisterAdresse>
+                <Adresselinje1>string</Adresselinje1>
+                <Adresselinje2>string</Adresselinje2>
+                <Postnummmer>string</Postnummmer>
+                <Poststed>string</Poststed>
+            </FolkeRegisterAdresse>
+            <Dokumentelement>
+                <Dokumenttype>string</Dokumenttype>
+                <Dokumenttittel>string</Dokumenttittel>
+                <DokumentId>string</DokumentId>
+                <Dokumentdato>2008-09-29T03:49:45</Dokumentdato>
+                <!--Optional:-->
+                <Dokumentfil>c29ub3Jhcw==</Dokumentfil>
+                <!--Optional:-->
+                <Tilhorighet>string</Tilhorighet>
+                <!--Optional:-->
+                <Info>string</Info>
+            </Dokumentelement>
+        </Elevelement>
+        <Feilmelding>
+            <FeilId>string</FeilId>
+            <Feiltype>string</Feiltype>
+            <DetaljertBeskrivelse>string</DetaljertBeskrivelse>
+        </Feilmelding>
+    </HentDataForArkiveringResponseElm>
+</ser:HentDataForArkiveringResponse>
