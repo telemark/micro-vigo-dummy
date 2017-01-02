@@ -1,8 +1,9 @@
 {
   "name": "micro-vigo-dummy",
   "description": "Acts as VIGO",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
+  "private": true,
   "author": {
     "name": "Geir Gåsodden",
     "email": "geir.gasodden@pythonia.no",
