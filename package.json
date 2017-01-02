@@ -1,7 +1,7 @@
 {
   "name": "micro-vigo-dummy",
   "description": "Acts as VIGO",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -12,11 +12,6 @@
   "engines": {
     "node": ">=6.9.2"
   },
-  "now": {
-    "engines": {
-      "node": "6.9.2"
-    }
-  },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
     "test-offline": "standard && tap --reporter=spec test/**/*.js",
@@ -24,7 +19,8 @@
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
     "setup": "npm install",
     "standard-fix": "standard --fix",
-    "start": "micro -p 3000"
+    "start": "micro -p 3000",
+    "now-deploy": "npm test && now && now alias"
   },
   "keywords": [
     "microservice",
@@ -39,6 +35,9 @@
   },
   "bugs": {
     "url": "http://github.com/zrrrzzt/micro-vigo-dummy/issues"
+  },
+  "now": {
+    "alias": "vigo.dummy.allthethings.win"
   },
   "devDependencies": {
     "coveralls": "2.11.15",
