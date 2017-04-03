@@ -1,7 +1,7 @@
 {
   "name": "micro-vigo-dummy",
   "description": "Acts as VIGO",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "private": true,
   "author": {
@@ -11,16 +11,15 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=6.9.2"
+    "node": ">=7.8.0"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
     "test-offline": "standard && tap --reporter=spec test/**/*.js",
     "coverage": "tap test/**/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
-    "setup": "npm install",
     "standard-fix": "standard --fix",
-    "start": "micro -p 3000",
+    "start": "micro",
     "now-deploy": "npm test && now && now alias"
   },
   "keywords": [
@@ -32,13 +31,20 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/zrrrzzt/micro-vigo-dummy.git"
+    "url": "https://github.com/telemark/micro-vigo-dummy.git"
   },
   "bugs": {
-    "url": "http://github.com/zrrrzzt/micro-vigo-dummy/issues"
+    "url": "https://github.com/telemark/micro-vigo-dummy/issues"
   },
+  "homepage": "https://github.com/telemark/micro-vigo-dummy",
   "now": {
-    "alias": "vigo.dummy.allthethings.win"
+    "alias": [
+      "vigo.dummy.allthethings.win"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "type": "npm"
   },
   "devDependencies": {
     "coveralls": "2.13.0",
