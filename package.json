@@ -1,7 +1,7 @@
 {
   "name": "micro-vigo-dummy",
   "description": "Acts as VIGO",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "license": "MIT",
   "private": true,
   "author": {
@@ -50,7 +50,7 @@
     "coveralls": "2.13.1",
     "nsp": "2.6.3",
     "standard": "10.0.2",
-    "tap": "10.4.0"
+    "tap": "10.3.3"
   },
   "dependencies": {
     "micro": "7.3.3"
