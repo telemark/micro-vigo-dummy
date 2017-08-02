@@ -1,7 +1,7 @@
 {
   "name": "micro-vigo-dummy",
   "description": "Acts as VIGO",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "license": "MIT",
   "private": true,
   "author": {
