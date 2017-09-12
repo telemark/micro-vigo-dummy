@@ -53,6 +53,6 @@
     "tap": "10.7.2"
   },
   "dependencies": {
-    "micro": "8.0.4"
+    "micro": "9.0.0"
   }
 }
