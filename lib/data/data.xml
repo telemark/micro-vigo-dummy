@@ -37,8 +37,8 @@
             </Dokumentelement>
         </Elevelement>
         <Feilmelding>
-            <FeilId>string</FeilId>
-            <Feiltype>string</Feiltype>
+            <FeilId>0</FeilId>
+            <Feiltype></Feiltype>
             <DetaljertBeskrivelse>string</DetaljertBeskrivelse>
         </Feilmelding>
     </HentDataForArkiveringResponseElm>
